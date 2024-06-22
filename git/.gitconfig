@@ -1,0 +1,95 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+    name = Peter_Xu
+
+[alias]
+    b = checkout -b
+    co = checkout
+    st = status
+    ci = commit
+    rl = reflog
+    rh = reset --hard HEAD
+    lg = log --graph --decorate --oneline --color --all
+    lgh = log HEAD --graph --decorate --oneline --color
+    line = log --oneline --graph --decorate
+    amend = commit -a --am --no-edit
+    unstage = reset --soft HEAD
+    update = remote update -p origin
+    list = "!f() { git diff-tree --no-commit-id --name-only -r  \"$1\"; }; f"
+    upon = "!f() { git rebase --onto origin/test \"$1^\" \"$1\"; }; f"
+    record = "!f() { git log --follow -- \"$1\"; }; f"
+    ot = co origin/test
+    od = co origin/develop
+    os = co origin/staging
+    om = co origin/master
+    omm = co origin/main
+    oo = "!f() { git co origin/\"$1\"; }; f"
+
+[color]
+    diff = auto
+    ui = true
+
+[core]
+    excludesfile = /Users/peter_xu/.gitignore
+#     pager = delta
+
+# [interactive]
+#     diffFilter = delta --color-only
+
+# [delta]
+#     navigate = true #(n, N)
+#     line-numbers = true #行數
+#     side-by-side = true #兩邊對應
+#     hyperlins = true #對應遠端 commit
+
+# [delta "decorations"]
+#     commit-decoration-style = bold yellow box ul
+#     file-style = bold yellow ul
+#     file-decoration-style = none
+#     hunk-header-decoration-style = cyan box ul
+
+# [delta "line-numbers"]
+#     line-numbers-left-style = cyan
+#     line-numbers-right-style = cyan
+#     line-numbers-minus-style = 124
+#     line-numbers-plus-style = 28
+
+# [merge]
+#     conflictstyle = diff3
+
+# [diff]
+#     colorMoved = default
+
+# [interactive]
+#     diffFilter = delta --color-only
+
+# [delta]
+#     features = basic line-numbers decorations
+#     syntax-theme = OneHalfDark
+#     plus-style = syntax "#003800"
+#     minus-style = syntax "#3f0001"
+
+# [delta "basic"]
+#     navigate = true #(n, N)
+#     line-numbers = true #行數
+#     side-by-side = true #兩邊對應
+#     hyperlins = true #對應遠端 commit
+
+# [delta "decorations"]
+#     commit-decoration-style = bold yellow box ul
+#     file-style = bold yellow ul
+#     file-decoration-style = none
+#     hunk-header-decoration-style = cyan box ul
+
+# [delta "line-numbers"]
+#     line-numbers-left-style = cyan
+#     line-numbers-right-style = cyan
+#     line-numbers-minus-style = 124
+#     line-numbers-plus-style = 28
+
+# [merge]
+#     conflictstyle = diff3
+
+# [diff]
+#     colorMoved = default
